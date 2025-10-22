@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold text-gray-800 text-center;
+  }
+
+  h2 {
+    @apply text-lg font-semibold;
+  }
+}
