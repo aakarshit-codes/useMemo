@@ -1,5 +1,10 @@
+import { useMemo } from "react";
+
 const ExpenseSummary = ({ expenses }) => {
-  const total = expenses.reduce((sum, e) => sum + e.amount, 0);
+  const total = useMemo(() => {
+    console.log("Calculating total expenses...");
+    return expenses.reduce((sum, e) => sum + e.amount, 0);
+  }, [expenses]);
 
   return (
     <div>
